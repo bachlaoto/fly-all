@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/fly/fly.iml" filepath="$PROJECT_DIR$/fly/fly.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fly-all.iml" filepath="$PROJECT_DIR$/.idea/fly-all.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fly-rest/phu.iml" filepath="$PROJECT_DIR$/fly-rest/phu.iml" />
+    </modules>
+  </component>
+</project>

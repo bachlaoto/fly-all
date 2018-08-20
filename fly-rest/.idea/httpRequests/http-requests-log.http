@@ -1,0 +1,50 @@
+GET http://localhost:8080/reservation
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-08-10T020221.503.html
+
+###
+
+GET http://localhost:8080/reservation
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-10T020128.503.html
+
+###
+
+GET http://localhost:8080/reservation
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-10T015630.503.html
+
+###
+
+GET http://localhost:8080
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-08-10T015500.503.html
+
+###
+
+GET http://localhost:8080
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-10T015325.503.html
+
+###
+
+GET http://localhost:8080
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-10T015233.503.html
+
+###
+
