@@ -1,56 +1,32 @@
 package com.ifisolution.fly.domain;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "role")
-public class Role implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-
-    @Id
+public class Role {
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private int id;
+	@Column(name = "role_id")
+	private int id;
+	@Column(name = "role")
+	private String role;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+	public int getId() {
+		return id;
+	}
 
-    @ManyToMany(mappedBy = "roles")
-    private Set<User> users = new HashSet<>();
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public Role() {
-    }
+	public String getRole() {
+		return role;
+	}
 
-    public Role(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
-
+	public void setRole(String role) {
+		this.role = role;
+	}
+	
+	
 }
