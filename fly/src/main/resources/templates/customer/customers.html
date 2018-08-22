@@ -29,6 +29,8 @@
 <nav th:include="layout :: header"></nav>
 
 <div class="container main-content list">
+    <h3 class="text-center text-uppercase">List customers</h3>
+
     <div th:if="${success}" class="row alert alert-success alert-dismissible">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
@@ -73,7 +75,7 @@
                     <td><a th:href="@{/admin/customer/{id}/update(id=${customer.id})}"><i class="fas fa-pencil-alt"></i>
                     </a>
                     </td>
-                    <td><a th:href="@{/admin/customer/{id}/delete(id=${customer.id})}"><i class="fas fa-trash-alt"></i>
+                    <td><a th:href="@{/admin/customer/delete/{id}(id=${customer.id})}"><i class="fas fa-trash-alt"></i>
                     </a>
                     </td>
                 </tr>

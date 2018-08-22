@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 
 @Controller
-@RequestMapping("customer")
+@RequestMapping("admin/customer")
 public class CustomerController {
     private final String domain = "http://localhost:8080";
 
@@ -50,8 +50,8 @@ public class CustomerController {
 //        Customer savedCustomer = customerService.save(customer);
         saveCustomer(customer);
 
-        return "redirect:/customer/" + customer.getId() + "/show";
-//        return "redirect:/customer";
+//        return "redirect:/customer/" + customer.getId() + "/show";
+        return "redirect:/admin/customer";
     }
     @GetMapping(value = {"","/","index"})
     public String getAllCustomer(Model model){
@@ -63,7 +63,7 @@ public class CustomerController {
     public String deleteCustomerById(@PathVariable String id) throws IOException {
         delete(id);
 //        customerService.deleteCustomer(Long.valueOf(id));
-        return "redirect:/customer";
+        return "redirect:/admin/customer";
     }
 
     public boolean saveCustomer(Customer cus) throws IOException {

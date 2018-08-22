@@ -48,6 +48,7 @@
 <div class="container main-content list">
     <div class="container main-content form">
         <div class="row">
+            <h3 class="text-center text-uppercase">Add new customer</h3>
             <form action="#" th:action="@{/admin/customer/customer}" th:object="${customer}"
                   method="POST" novalidate="novalidate">
                 <input type="hidden" th:field="*{id}"/>
