@@ -1,6 +1,5 @@
 package com.ifisolution.fly.services;
 
-import com.ifisolution.fly.domain.FlightSchedule;
 import com.ifisolution.fly.domain.Reservation;
 import com.ifisolution.fly.repositories.FlightScheduleRepository;
 import com.ifisolution.fly.repositories.ReservationRepository;
@@ -14,17 +13,8 @@ import java.util.Optional;
 public class ReservationServiceImpl implements ReservationService {
     @Autowired
     private FlightScheduleRepository flightScheduleRepository;
+    @Autowired
     private ReservationRepository reservationRepository;
-
-    @Override
-    public Reservation findByFlightScheduleIdAndReservationId(Long flightScheduleId, Long reservationId) {
-
-        Optional<FlightSchedule> flightScheduleOptional = flightScheduleRepository.findById(flightScheduleId);
-        FlightSchedule flightSchedule = flightScheduleOptional.get();
-        Optional<Reservation> reservationOptional = flightSchedule.getReservations().stream().filter(reservation -> reservation.getId().equals(reservationId)).findFirst();
-        return reservationOptional.get();
-
-    }
 
     @Override
     public List<Reservation> getReservations() {
@@ -33,17 +23,20 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public void deleteByID(Long reservationId, Long flightScheduleId) {
-        Optional<FlightSchedule> flightScheduleOptional = flightScheduleRepository.findById(flightScheduleId);
-        FlightSchedule flightSchedule = flightScheduleOptional.get();
+    public Reservation findByID(Long id) {
+        Optional<Reservation> reservationOptional = reservationRepository.findById(id);
+        return reservationOptional.get();
+    }
 
-        Optional<Reservation> reservationOptional = flightSchedule.getReservations().stream().filter(reservation -> reservation.getId().equals(reservationId)).findFirst();
+    @Override
+    public void deleteByID(Long reservationId) {
+        reservationRepository.deleteById(reservationId);
+    }
 
-
-        Reservation reservationToDelete = reservationOptional.get();
-        reservationToDelete.setFlightSchedule(null);
-        flightSchedule.getReservations().remove(reservationOptional.get());
-        flightScheduleRepository.save(flightSchedule);
+    @Override
+    public Reservation save(Reservation reservation) {
+        return reservationRepository.save(reservation);
     }
 }
+
 

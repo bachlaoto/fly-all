@@ -1,22 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>customer</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="layout :: head"></head>
 <body>
-<h1>Hello</h1>
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Detail</th>
-    </tr>
-    <tr>
-        <td th:text="${customer.id}">id</td>
-        <td th:text="${customer.getCustomerName()}">name</td>
-        <td th:text="${customer.getOtherDetails()}">other</td>
-    </tr>
-</table>
+<nav th:include="layout :: header"></nav>
+<!--<table>-->
+<!--<tr>-->
+<!--<th>ID</th>-->
+<!--<th>Name</th>-->
+<!--<th>Detail</th>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td th:text="${customer.id}">id</td>-->
+<!--<td th:text="${customer.getCustomerName()}">name</td>-->
+<!--<td th:text="${customer.getOtherDetails()}">other</td>-->
+<!--</tr>-->
+<!--</table>-->
+
+<div class="container main-content list">
+    <div th:if="${success}" class="row alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <span th:text="${success}"></span>
+    </div>
+
+    <th:block th:if="${#lists.isEmpty(customer)}">
+        <h3>No customer</h3>
+    </th:block>
+
+    <th:block th:unless="${#lists.isEmpty(customer)}">
+        <div class="row">
+            <a th:href="@{/admin/customer/new}" class="btn btn-success pull-left">
+                <span class="glyphicon glyphicon-plus"></span> Add new customer
+            </a>
+            <!--<form class="form-inline pull-right" action="#" th:action="@{/contact/search}" method="GET">-->
+            <!--<div class="form-group">-->
+            <!--<input type="text" class="form-control" name="q"-->
+            <!--placeholder="Type contact name..." />-->
+            <!--</div>-->
+            <!--<button type="submit" class="btn btn-primary">Search</button>-->
+            <!--</form>-->
+        </div>
+        <div class="row">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Detail</th>
+                </tr>
+                </thead>
+                <tbody>
+                <td th:text="${customer.id}"></td>
+                <td th:text="${customer.getCustomerName()}"></td>
+                <td th:text="${customer.getOtherDetails()}"></td>
+                </tbody>
+            </table>
+        </div>
+    </th:block>
+</div>
+<footer th:include="layout :: footer"></footer>
+
 </body>
 </html>
