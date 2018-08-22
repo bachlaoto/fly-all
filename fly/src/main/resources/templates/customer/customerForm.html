@@ -1,39 +1,75 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>Title</title>-->
+<!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
+<!--integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"-->
+<!--th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}">-->
+
+<!--<script src="/webjars/jquery/1.11.1/jquery.min.js"></script>-->
+
+<!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"-->
+<!--integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"-->
+<!--crossorigin="anonymous" th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container-fluid" style="margin-top: 20px">-->
+<!--<div class="row">-->
+<!--<div class="col-md-6 col-md-offset-3">-->
+<!--<h1>List customer</h1>-->
+<!--<form th:object="${customer}" th:action="@{/customer/customer}" method="post">-->
+<!--<input type="hidden" th:field="*{id}"/>-->
+<!--Name:<br>-->
+<!--<input type="text" th:field="*{customerName}">-->
+<!--<br>-->
+<!--Detailt:<br>-->
+<!--<input type="text" th:field="*{otherDetails}">-->
+<!--<br><br>-->
+<!--<input type="submit" value="Submit">-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
-          th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}">
-
-    <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous" th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="layout :: head"></head>
 <body>
-<div class="container-fluid" style="margin-top: 20px">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <h1>List customer</h1>
-            <form th:object="${customer}" th:action="@{/customer/customer}" method="post">
+<nav th:include="layout :: header"></nav>
+
+<div class="container main-content list">
+    <div class="container main-content form">
+        <div class="row">
+            <form action="#" th:action="@{/admin/customer/customer}" th:object="${customer}"
+                  method="POST" novalidate="novalidate">
                 <input type="hidden" th:field="*{id}"/>
-                Name:<br>
-                <input type="text" th:field="*{customerName}">
-                <br>
-                Detailt:<br>
-                <input type="text" th:field="*{otherDetails}">
-                <br><br>
-                <input type="submit" value="Submit">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control"
+                           th:field="*{customerName}" th:errorclass="field-error"/>
+
+                    <!--<em th:if="${#fields.hasErrors('name')}" th:errors="*{customerName}"></em>-->
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control"
+                           th:field="*{otherDetails}"/>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
             </form>
         </div>
-    </div>
+    </div><!-- /.container -->
 </div>
+<footer th:include="layout :: footer"></footer>
 
 </body>
 </html>
