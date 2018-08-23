@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 @RequestMapping("admin/customer")
@@ -57,9 +58,9 @@ public class CustomerController {
     public String getAllCustomer(Model model) throws IOException {
         String Jsonpath = domain + "/customer/get";
         Customer customer = new Customer();
-        customer = (Customer) new CustomerUtils().get(Jsonpath, customer);
+        List<Customer> customerList = (List<Customer>) (Object) new CustomerUtils().getLst(Jsonpath, customer);
 
-        model.addAttribute("customers", customer);
+        model.addAttribute("customers", customerList);
         return "customer/customers";
     }
     @GetMapping("/delete/{id}")

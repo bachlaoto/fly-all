@@ -1,5 +1,6 @@
 package com.ifisolution.fly.utils;
 
+import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ifisolution.fly.domain.Customer;
 import org.apache.http.client.methods.HttpDelete;
@@ -16,9 +17,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.util.List;
 
 public class CustomerUtils {
-    private final String domain = "http://192.188.88.129:8080";
+    private final String domain = "http://localhost:8080";
 
     public static Object get(String JsonSource, Object xxx) throws IOException {
 
@@ -46,6 +48,32 @@ public class CustomerUtils {
         return xxx;
     }
 
+    public List<Object> getLst(String JsonSoure, Object xxx) throws IOException {
+
+        URL website = new URL(JsonSoure);
+        InputStream inputStream = null;
+        BufferedReader bufferedReader = null;
+        List<Object> lst = null;
+        try {
+            inputStream = website.openStream();
+            bufferedReader = new BufferedReader(new InputStreamReader(inputStream, Charset.forName("UTF-8")));
+
+            StringBuilder stringBuilder = new StringBuilder();
+            int cp;
+            while ((cp = bufferedReader.read()) != -1) {
+                stringBuilder.append((char) cp);
+            }
+            ObjectMapper mapper = new ObjectMapper();
+            JavaType type = mapper.getTypeFactory().constructCollectionType(List.class, xxx.getClass());
+            lst = mapper.readValue(stringBuilder.toString(), type);
+        } catch (Exception e) {
+            inputStream.close();
+            bufferedReader.close();
+
+        }
+
+        return lst;
+    }
     public boolean saveCustomer(Customer cus) throws IOException {
         boolean check = true;
         JSONObject json = new JSONObject();
