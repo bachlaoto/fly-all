@@ -21,21 +21,29 @@ public class CustomerController {
 
     @GetMapping
     @RequestMapping("/{id}/show")
-    public String showById(@PathVariable String id, Model model){
+    public String showById(@PathVariable String id, Model model) throws IOException {
 
-        model.addAttribute("customer", customerService.findCustomerByID(new Long(id)));
+//        model.addAttribute("customer", customerService.findCustomerByID(new Long(id)));
+//
+//        return "customer/oneCustomer";
 
-        return "customer/oneCustomer";
+        String Jsonpath = domain + "/customer/" + id + "/show";
+        Customer customer = new Customer();
+        customer = (Customer) new CustomerUtils().get(Jsonpath, customer);
+
+        model.addAttribute("customers", customer);
+        return "customer/customers";
     }
 
     @GetMapping("/new")
-    public String newCustomer(Model model){
+    public String newCustomer(Model model) throws IOException {
         model.addAttribute("customer", new Customer());
         return "customer/customerForm";
     }
 
     @GetMapping("/{id}/update")
     public String UpdateCustomer(@PathVariable String id, Model model){
+
         model.addAttribute("customer", customerService.findCustomerByID(Long.valueOf(id)));
         return "customer/customerForm";
     }
