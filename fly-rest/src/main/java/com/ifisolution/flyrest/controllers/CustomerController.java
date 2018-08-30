@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("customer")
 public class CustomerController {
     @Autowired

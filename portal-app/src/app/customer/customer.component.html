@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="col-md-6">
+    <h2 class="text-center"> Customer Details</h2>
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Customer name</th>
+        <th>Other details</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let customer of customers">
+        <td class="hidden">{{customer.id}}</td>
+        <td>{{customer.customerName}}</td>
+        <td>{{customer.otherDetails}}</td>
+        <!--<td><button class="btn btn-danger" (click)="deletecustomer(customer)"> Delete customer</button></td>-->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
