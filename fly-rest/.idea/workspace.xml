@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb00758c-1df5-442d-a29a-a7539608db37" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifisolution/flyrest/controllers/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifisolution/flyrest/controllers/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifisolution/flyrest/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifisolution/flyrest/controllers/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fly/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fly/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fly/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../portal-app/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../portal-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/customer/add-customer.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/customer/add-customer.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/customer/customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../portal-app/src/app/customer/customer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/customer/customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../portal-app/src/app/customer/customer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/service/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../portal-app/src/app/service/customer.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -166,8 +155,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ifisolution/flyrest/controllers/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+            <state relative-caret-position="225">
+              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -299,7 +288,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="496" />
     <option name="y" value="208" />
     <option name="width" value="1400" />
@@ -370,7 +359,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535710266595" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535710649872" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -570,7 +559,7 @@
       <workItem from="1534747029368" duration="162000" />
       <workItem from="1534747212023" duration="759000" />
       <workItem from="1535619475809" duration="4494000" />
-      <workItem from="1535698270357" duration="3796000" />
+      <workItem from="1535698270357" duration="3835000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD Rest customer">
       <created>1533808317810</created>
@@ -590,7 +579,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47801000" />
+    <option name="totallyTimeSpent" value="47840000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -813,8 +802,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ifisolution/flyrest/controllers/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        <state relative-caret-position="225">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
         </state>
       </provider>
     </entry>
