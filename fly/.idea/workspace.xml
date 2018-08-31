@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4268a0f0-4d60-42f1-b501-0c76052d1d91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifisolution/fly/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifisolution/fly/controllers/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fly-rest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fly-rest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fly-rest/src/main/java/com/ifisolution/flyrest/controllers/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fly-rest/src/main/java/com/ifisolution/flyrest/controllers/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fly-rest/src/main/java/com/ifisolution/flyrest/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fly-rest/src/main/java/com/ifisolution/flyrest/controllers/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../portal-app/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../portal-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/customer/add-customer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/customer/add-customer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/customer/customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../portal-app/src/app/customer/customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/customer/customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../portal-app/src/app/customer/customer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portal-app/src/app/service/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../portal-app/src/app/service/customer.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,9 +77,10 @@
     <session id="671172455">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -79,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ifisolution/fly/domain/Reservation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -106,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ifisolution/fly/services/ReservationService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -234,7 +246,7 @@
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="65" />
     <option name="y" value="24" />
-    <option name="width" value="928" />
+    <option name="width" value="926" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -243,6 +255,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,9 +370,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,9 +381,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533118463407" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../fly" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -417,6 +430,7 @@
       <workItem from="1533108762006" duration="6422000" />
       <workItem from="1533192505561" duration="1050000" />
       <workItem from="1535614898752" duration="23000" />
+      <workItem from="1535701541551" duration="77000" />
     </task>
     <task id="LOCAL-00001" summary="132432">
       <created>1533115165445</created>
@@ -450,7 +464,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20088000" />
+    <option name="totallyTimeSpent" value="20165000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -462,9 +476,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="928" height="1056" extended-state="4" />
+    <frame x="65" y="24" width="926" height="1056" extended-state="4" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.40136054" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.40113637" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -486,6 +500,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3294979" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.4997236" weight="0.3294979" />
+      <window_info anchor="right" id="RestServices" />
       <window_info anchor="right" id="Hibernate Tools" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -507,6 +522,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="1" />
     <MESSAGE value="132432" />
     <MESSAGE value="13243254654" />
@@ -669,7 +687,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ifisolution/fly/domain/Reservation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -690,7 +708,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ifisolution/fly/services/ReservationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>

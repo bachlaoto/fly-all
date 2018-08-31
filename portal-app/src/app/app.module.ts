@@ -10,7 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {AddUserComponent} from './user/add-user.component';
 import {CustomerComponent} from './customer/customer.component';
 import {CustomerService} from './service/customer.service';
-import {MyNewDirectiveDirective} from './customer/my-new-directive.directive';
+import {AddCustomerComponent} from './customer/add-customer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import {MyNewDirectiveDirective} from './customer/my-new-directive.directive';
     UserComponent,
     AddUserComponent,
     CustomerComponent,
-    MyNewDirectiveDirective
+    AddCustomerComponent
   ],
   imports: [
     BrowserModule,

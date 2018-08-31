@@ -15,7 +15,10 @@
         <td class="hidden">{{customer.id}}</td>
         <td>{{customer.customerName}}</td>
         <td>{{customer.otherDetails}}</td>
-        <!--<td><button class="btn btn-danger" (click)="deletecustomer(customer)"> Delete customer</button></td>-->
+        <td>
+          <button class="btn btn-danger" (click)="deleteCustomer(customer)"> Delete customer</button>
+          <button class="btn btn-danger" (click)="editCustomer(customer)" style="margin-left: 20px;"> Edit</button>
+        </td>
       </tr>
       </tbody>
     </table>

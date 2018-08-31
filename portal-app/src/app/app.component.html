@@ -10,18 +10,42 @@
 <!--<br/>-->
 <!--<router-outlet></router-outlet>-->
 <!--</div>-->
+<div style="margin-bottom: 80px" class="container">
+  <nav
+    class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" routerLink="/customers">Fly project</a>
+      </div>
+    </div>
+  </nav>
+</div>
 
-
-<div class="container-fluid">
-  <div class="col-md-offset-1">
-    <h1>
-      Welcome to {{title}}!
-    </h1>
-  </div>
-
-  <a routerLink="/customers">List Customer</a>
-  <a style="margin-left:10px" routerLink="/addCustomer">Add Customer</a>
+<div class="container padding-top:20px">
+  <!--<div class="col-md-offset-1">-->
+  <!--<h1>-->
+  <!--Welcome to {{title}}!-->
+  <!--</h1>-->
+  <!--</div>-->
+  <!--<a routerLink="/customers">List Customer</a>-->
+  <a routerLink="/addCustomer" class="btn btn-success pull-left">
+    <span class="glyphicon glyphicon-plus"></span> Add new customer
+  </a>
+  <!--<a style="margin-left:10px" routerLink="/addCustomer">Add Customer</a>-->
   <br/>
   <router-outlet></router-outlet>
 </div>
+<div>
+  <footer class="container">
+    <p class="footer1">&copy; fresher 18 Ifisolution</p>
 
+  </footer>
+</div>

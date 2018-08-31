@@ -23,11 +23,16 @@ export class CustomerComponent implements OnInit {
       });
   }
 
-  // deleteUser(user: User): void {
-  //   this.userService.deleteUser(user)
-  //     .subscribe( data => {
-  //       this.users = this.users.filter(u => u !== user);
-  //     })
-  // };
+  deleteCustomer(customer: Customer): void {
+    this.customerService.deleteCustomer(customer.id)
+      .subscribe(data => {
+        this.customers = this.customers.filter(u => u !== customer);
+      });
+  }
 
+  // editCustomer(customer: Customer): void {
+  //   localStorage.removeItem("editUserId");
+  //   localStorage.setItem("editUserId", user.id.toString());
+  //   this.router.navigate(['edit-user']);
+  // };
 }
