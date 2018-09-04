@@ -1,0 +1,41 @@
+<!--<div class="container">-->
+<!--<div class="col-md-6">-->
+<!--<h2 class="text-center">Add Customer</h2>-->
+<!--<form>-->
+<!--<div class="form-group">-->
+<!--<label>Customer name:</label>-->
+<!--<input type="text" [(ngModel)]="customer.customerName" placeholder="name" class="form-control" [ngModelOptions]="{standalone: true}">-->
+<!--</div>-->
+
+<!--<div class="form-group">-->
+<!--<label>Customer other details:</label>-->
+<!--<input [(ngModel)]="customer.otherDetails" placeholder="First Name" name="firstName" class="form-control" [ngModelOptions]="{standalone: true}">-->
+<!--</div>-->
+<!--<button class="btn btn-success" (click)="createCustomer()">Create</button>-->
+<!--</form> -->
+<!--</div>-->
+<!--</div>-->
+
+<div class="col-md-6">
+  <h2 class="text-center">Add Customer</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>customerName:</label>
+      <input formControlName="customerName" placeholder="customerName" name="customerName" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.customerName.errors }">
+      <div *ngIf="submitted && f.customerName.errors" class="invalid-feedback">
+        <div *ngIf="f.customerName.errors.required">First Name is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>otherDetails:</label>
+      <input formControlName="otherDetails" placeholder="otherDetails" name="otherDetails" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.customerName.errors }">
+      <div *ngIf="submitted && f.otherDetails.errors" class="invalid-feedback">
+        <div *ngIf="f.otherDetails.errors.required">First Name is required</div>
+      </div>
+    </div>
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>

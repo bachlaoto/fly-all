@@ -1,0 +1,19 @@
+<div class="col-md-6">
+  <h2 class="text-center">Edit User</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+
+    <div class="form-group">
+      <label>Customer Name:</label>
+      <input formControlName="customerName" placeholder="customerName" name="customerName" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Other detail:</label>
+      <input formControlName="otherDetails" placeholder="otherDetails" name="otherDetails" class="form-control"
+             id="lastName">
+    </div>
+
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>
