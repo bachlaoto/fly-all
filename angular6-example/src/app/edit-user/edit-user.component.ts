@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {UserService} from "../service/user.service";
-import {Router} from "@angular/router";
-import {User} from "../model/user.model";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {first} from "rxjs/operators";
+import {UserService} from '../service/user.service';
+import {Router} from '@angular/router';
+import {User} from '../model/user.model';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {first} from 'rxjs/operators';
 
 @Component({
   selector: 'app-edit-user',
@@ -19,9 +19,9 @@ export class EditUserComponent implements OnInit {
   }
 
   ngOnInit() {
-    let userId = localStorage.getItem("editUserId");
+    const userId = localStorage.getItem('editUserId');
     if (!userId) {
-      alert("Invalid action.")
+      alert('Invalid action.');
       this.router.navigate(['list-user']);
       return;
     }

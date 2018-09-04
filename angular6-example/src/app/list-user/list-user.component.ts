@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
-import {UserService} from "../service/user.service";
-import {User} from "../model/user.model";
+import {Router} from '@angular/router';
+import {UserService} from '../service/user.service';
+import {User} from '../model/user.model';
 
 @Component({
   selector: 'app-list-user',
@@ -26,16 +26,16 @@ export class ListUserComponent implements OnInit {
     this.userService.deleteUser(user.id)
       .subscribe(data => {
         this.users = this.users.filter(u => u !== user);
-      })
-  };
+      });
+  }
 
   editUser(user: User): void {
-    localStorage.removeItem("editUserId");
-    localStorage.setItem("editUserId", user.id.toString());
+    localStorage.removeItem('editUserId');
+    localStorage.setItem('editUserId', user.id.toString());
     this.router.navigate(['edit-user']);
-  };
+  }
 
   addUser(): void {
     this.router.navigate(['add-user']);
-  };
+  }
 }

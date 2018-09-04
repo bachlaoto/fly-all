@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
-import {AuthenticationService} from "../service/auth.service";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {AuthenticationService} from '../service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +11,8 @@ import {AuthenticationService} from "../service/auth.service";
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  submitted: boolean = false;
-  invalidLogin: boolean = false;
+  submitted = false;
+  invalidLogin = false;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private authService: AuthenticationService) {
   }
@@ -22,8 +22,9 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-    if (this.loginForm.controls.email.value == 'dhiraj@gmail.com' && this.loginForm.controls.password.value == 'password') {
-      this.router.navigate(['list-user']);
+    if (this.loginForm.controls.email.value == 'admin@gmail.com' && this.loginForm.controls.password.value == '123456') {
+      sessionStorage.setItem('loginok', 'ok');
+      this.router.navigate(['customer']);
     } else {
       this.invalidLogin = true;
     }
