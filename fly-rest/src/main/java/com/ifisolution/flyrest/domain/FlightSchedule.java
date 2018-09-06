@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "flight_schedules")
-@JsonIgnoreProperties({"reservations"})
+@JsonIgnoreProperties({"reservations,airline"})
 
 public class FlightSchedule {
     @Column(name = "id")

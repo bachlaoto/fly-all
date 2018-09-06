@@ -1,4 +1,4 @@
-export class flightSchedule {
+export class FlightSchedule {
 
   id: number;
   arrivalTime: Date;

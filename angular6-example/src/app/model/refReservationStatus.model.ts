@@ -1,4 +1,4 @@
-export class User {
+export class RefReservationStatus {
 
   id: number;
   reservationStatusDescription: string;

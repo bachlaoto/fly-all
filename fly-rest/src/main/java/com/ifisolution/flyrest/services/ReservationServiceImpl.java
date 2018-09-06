@@ -1,7 +1,6 @@
 package com.ifisolution.flyrest.services;
 
 import com.ifisolution.flyrest.domain.Reservation;
-import com.ifisolution.flyrest.repositories.FlightScheduleRepository;
 import com.ifisolution.flyrest.repositories.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,8 +10,7 @@ import java.util.Optional;
 
 @Service
 public class ReservationServiceImpl implements ReservationService {
-    @Autowired
-    private FlightScheduleRepository flightScheduleRepository;
+
     @Autowired
     private ReservationRepository reservationRepository;
 

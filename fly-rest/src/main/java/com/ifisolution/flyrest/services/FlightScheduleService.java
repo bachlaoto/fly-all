@@ -12,4 +12,6 @@ public interface FlightScheduleService {
     FlightSchedule findFlightScheduleById(Long id);
 
     void deleteFlightScheduleById(Long id);
+
+//    FlightSchedule findByFlightScheduleIdAndAirlineId(Long flightScheduleId, Long airlineId);
 }

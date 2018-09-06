@@ -13,6 +13,7 @@ import java.util.Optional;
 public class FlightScheduleServiceImpl implements FlightScheduleService {
     @Autowired
     private FlightScheduleRepository flightScheduleRepository;
+    private AirlineService airlineService;
 
     public FlightScheduleServiceImpl(FlightScheduleRepository flightScheduleRepository, ReservationRepository reservationRepository) {
         this.flightScheduleRepository = flightScheduleRepository;
@@ -41,4 +42,5 @@ public class FlightScheduleServiceImpl implements FlightScheduleService {
     public void deleteFlightScheduleById(Long id) {
         flightScheduleRepository.deleteById(id);
     }
+
 }
