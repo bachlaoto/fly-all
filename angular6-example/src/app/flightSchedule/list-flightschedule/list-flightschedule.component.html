@@ -1,0 +1,37 @@
+<!--<div class="container">-->
+<!--<div class="col-md-6">-->
+<a routerLink="/add-flightSchedule" class="btn btn-success pull-left">
+  <span class="glyphicon glyphicon-plus"></span> Add new flightSchedule
+</a>
+<h1 class="text-center"> FlightSchedule Details</h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th class="hidden">Id</th>
+    <th>Arrival Time</th>
+    <th>Depature Time</th>
+    <th>Flight Number</th>
+    <th>Other Details</th>
+    <th>Airline Code</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let flightSchedule of flightSchedules">
+    <td class="hidden">{{flightSchedule.id}}</td>
+    <td>{{flightSchedule.arrivalTime}}</td>
+    <td>{{flightSchedule.departureTime}}</td>
+    <td>{{flightSchedule.flightNumber}}</td>
+    <td>{{flightSchedule.otherDetails}}</td>
+    <!--<td>{{flightSchedule.airlineCode}}</td>-->
+    <td>
+      <button class="btn btn-danger" (click)="deleteFlightSchedule(flightSchedule)"> Delete</button>
+      <button class="btn btn-danger" (click)="editFlightSchedule(flightSchedule)" style="margin-left: 20px;"> Edit
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<!--</div>-->
+<!--</div>-->
+
