@@ -9,4 +9,7 @@ public interface FlightScheduleService {
 
     List<FlightSchedule> getFlightSchedule();
 
+    FlightSchedule findFlightScheduleById(Long id);
+
+    void deleteFlightScheduleById(Long id);
 }

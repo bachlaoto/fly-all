@@ -14,7 +14,7 @@ public class AirlineServiceImpl implements AirlineService {
     private AirlineRepository airlineRepository;
 
     @Override
-    public Airline finAirlineByID(Long id) {
+    public Airline findAirlineByID(Long id) {
         Optional<Airline> airlineOptional = airlineRepository.findById(id);
         return airlineOptional.get();
     }

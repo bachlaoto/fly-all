@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FlightScheduleServiceImpl implements FlightScheduleService {
@@ -27,5 +28,17 @@ public class FlightScheduleServiceImpl implements FlightScheduleService {
         List<FlightSchedule> listFlightSchedule = flightScheduleRepository.findAll();
 
         return listFlightSchedule;
+    }
+
+    @Override
+    public FlightSchedule findFlightScheduleById(Long id) {
+        Optional<FlightSchedule> flightScheduleOptional = flightScheduleRepository.findById(id);
+
+        return flightScheduleOptional.get();
+    }
+
+    @Override
+    public void deleteFlightScheduleById(Long id) {
+        flightScheduleRepository.deleteById(id);
     }
 }

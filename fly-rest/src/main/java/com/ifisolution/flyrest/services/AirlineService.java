@@ -5,7 +5,7 @@ import com.ifisolution.flyrest.domain.Airline;
 import java.util.List;
 
 public interface AirlineService {
-    Airline finAirlineByID(Long id);
+    Airline findAirlineByID(Long id);
 
     List<Airline> findAllAirline();
 
