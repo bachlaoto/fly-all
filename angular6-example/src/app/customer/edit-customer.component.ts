@@ -22,7 +22,7 @@ export class EditCustomerComponent implements OnInit {
     const customerId = localStorage.getItem('editCustomerId');
     if (!customerId) {
       alert('Invalid action.');
-      this.router.navigate(['list-customer']);
+      this.router.navigate(['customer']);
       return;
     }
     this.editForm = this.formBuilder.group({

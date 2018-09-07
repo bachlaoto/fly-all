@@ -37,7 +37,7 @@ public class FlightSchedule {
     @JoinColumn(name = "airline_code", insertable = false, updatable = false)
     private Airline airline;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "flightSchedule", insertable = false, updatable = false)
     private List<Reservation> reservations;
 }

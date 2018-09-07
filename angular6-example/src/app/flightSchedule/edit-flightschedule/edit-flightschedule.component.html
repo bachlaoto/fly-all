@@ -1,3 +1,32 @@
-<p>
-  edit-flightschedule works!
-</p>
+<div class="col-md-6">
+  <h2 class="text-center">Edit Flight Schedule</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+
+    <div class="form-group">
+      <label>Arrival Time:</label>
+      <input formControlName="arrivalTime" placeholder="arrivalTime" name="arrivalTime" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Depature Time:</label>
+      <input formControlName="departureTime" placeholder="departureTime" name="departureTime" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Flight Number:</label>
+      <input formControlName="flightNumber" placeholder="flightNumber" name="flightNumber" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Other Details:</label>
+      <input formControlName="otherDetails" placeholder="otherDetails" name="otherDetails" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Airline Code:</label>
+      <input formControlName="airlineCode" placeholder="airlineCode" name="airlineCode" class="form-control">
+    </div>
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>

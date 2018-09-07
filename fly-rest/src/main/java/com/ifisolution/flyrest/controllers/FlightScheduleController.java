@@ -1,6 +1,5 @@
 package com.ifisolution.flyrest.controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ifisolution.flyrest.domain.FlightSchedule;
 import com.ifisolution.flyrest.services.FlightScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,10 +28,11 @@ public class FlightScheduleController {
     }
 
     @PostMapping("/new")
-    public FlightSchedule newFlightSchedule(@RequestBody String json) throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        FlightSchedule flightSchedule = objectMapper.readValue(json, FlightSchedule.class);
+    public FlightSchedule newFlightSchedule(@RequestBody FlightSchedule flightSchedule) throws IOException {
         return flightScheduleService.saveFlightSchedule(flightSchedule);
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        FlightSchedule flightSchedule = objectMapper.readValue(json, FlightSchedule.class);
+//        return flightScheduleService.saveFlightSchedule(flightSchedule);
     }
 
     @PutMapping("/update")
@@ -62,9 +62,9 @@ public class FlightScheduleController {
 //
     @DeleteMapping("/delete/{id}")
     public void deleteFlightScheduleById(@PathVariable("id") String id, HttpServletResponse res) throws IOException {
-//        FlightSchedule flightScheduleTemp = flightScheduleService.findFlightScheduleByID(Long.parseLong(id));
-        flightScheduleService.deleteFlightScheduleById(Long.parseLong(id));
+//        FlightSchedule flightScheduleTemp = flightScheduleService.findFlightScheduleById(Long.parseLong(id));
+//        flightScheduleService.deleteFlightScheduleById(Long.parseLong(id));
         res.getWriter().print(id);
-
+        flightScheduleService.deleteFlightScheduleById(Long.valueOf(id));
     }
 }
