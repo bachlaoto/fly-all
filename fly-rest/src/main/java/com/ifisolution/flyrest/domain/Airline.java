@@ -23,7 +23,7 @@ public class Airline {
     @Column(name = "other_details")
     private String otherDetails;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "airline", insertable = false, updatable = false)
-    private List<FlightSchedule> flightSchedule;
+    private List<FlightSchedule> flightScheduleList;
 }

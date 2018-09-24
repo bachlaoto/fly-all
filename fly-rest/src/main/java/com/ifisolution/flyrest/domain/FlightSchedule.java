@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.List;
 
 @Data
@@ -17,12 +16,14 @@ public class FlightSchedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    //    @JsonFormat(pattern="yyyy-MM-dd")
     @Column(name = "arrival_time")
-    private Date arrivalTime;
-
+    private String arrivalTime;
+    //    @JsonFormat(pattern="yyyy-MM-dd HH:mm")
+//    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
+//01692015021
     @Column(name = "departure_time")
-    private Date departureTime;
+    private String departureTime;
 
     @Column(name = "flight_number")
     private int flightNumber;
@@ -33,9 +34,10 @@ public class FlightSchedule {
     @Column(name = "airline_code")
     private int airlineCode;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     @JoinColumn(name = "airline_code", insertable = false, updatable = false)
     private Airline airline;
+
 
     @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "flightSchedule", insertable = false, updatable = false)

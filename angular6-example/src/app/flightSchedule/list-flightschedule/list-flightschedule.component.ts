@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 // import {FlightScheduleService} from '../../service/flightSchedule.service';
 // import {FlightSchedule} from '../../model/flightSchedule.model';
 import {FlightScheduleService} from '../../service/flight-schedule.service';
+import {Airline} from '../../model/airline.model';
 
 @Component({
   selector: 'app-list-flightschedule',
@@ -13,7 +14,7 @@ import {FlightScheduleService} from '../../service/flight-schedule.service';
 export class ListFlightscheduleComponent implements OnInit {
 
   flightSchedules: FlightSchedule[];
-
+  airlines: Airline[];
   constructor(private router: Router, private flightScheduleService: FlightScheduleService) {
 
   }
@@ -34,6 +35,7 @@ export class ListFlightscheduleComponent implements OnInit {
       .subscribe(data => {
         this.flightSchedules = data;
       });
+
   }
 
   deleteFlightSchedule(flightSchedule: FlightSchedule): void {

@@ -1,8 +1,8 @@
 export class FlightSchedule {
 
   id: number;
-  arrivalTime: Date;
-  departureTime: Date;
+  arrivalTime: String;
+  departureTime: String;
   flightNumber: number;
   otherDetails: string;
   airlineCode: number;

@@ -19,6 +19,7 @@ public class Customer {
     private String customerName;
     @Column(name = "other_details")
     private String otherDetails;
+
     @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "customer", insertable = false, updatable = false)
     private List<Reservation> reservationList;

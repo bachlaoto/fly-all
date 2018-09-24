@@ -38,10 +38,10 @@ public class FlightScheduleController {
     @PutMapping("/update")
     public FlightSchedule UpdateFlightSchedule(@RequestBody FlightSchedule flightSchedule) {
         FlightSchedule flightScheduleTemp = flightScheduleService.findFlightScheduleById(flightSchedule.getId());
-//        if (flightScheduleTemp != null) {
-//            flightScheduleService.saveFlightSchedule(flightSchedule);
-//            return flightSchedule;
-//        }
+        if (flightScheduleTemp != null) {
+            flightScheduleService.saveFlightSchedule(flightSchedule);
+            return flightSchedule;
+        }
         flightScheduleService.saveFlightSchedule(flightScheduleTemp);
         return flightScheduleTemp;
     }

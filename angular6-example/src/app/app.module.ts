@@ -19,6 +19,8 @@ import {FlightScheduleService} from './service/flight-schedule.service';
 import {ListFlightscheduleComponent} from './flightSchedule/list-flightschedule/list-flightschedule.component';
 import {EditFlightscheduleComponent} from './flightSchedule/edit-flightschedule/edit-flightschedule.component';
 import {AddFlightscheduleComponent} from './flightSchedule/add-flightschedule/add-flightschedule.component';
+import {HeaderComponent} from './header/header.component';
+import {AirlineService} from './service/airline.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import {AddFlightscheduleComponent} from './flightSchedule/add-flightschedule/ad
     EditCustomerComponent,
     ListFlightscheduleComponent,
     EditFlightscheduleComponent,
-    AddFlightscheduleComponent
+    AddFlightscheduleComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ import {AddFlightscheduleComponent} from './flightSchedule/add-flightschedule/ad
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthenticationService, UserService, CustomerService, FlightScheduleService],
+  providers: [AuthenticationService, UserService, CustomerService, FlightScheduleService, AirlineService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

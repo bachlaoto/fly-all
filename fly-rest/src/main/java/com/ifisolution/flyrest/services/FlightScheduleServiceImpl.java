@@ -13,6 +13,7 @@ import java.util.Optional;
 public class FlightScheduleServiceImpl implements FlightScheduleService {
     @Autowired
     private FlightScheduleRepository flightScheduleRepository;
+    @Autowired
     private AirlineService airlineService;
 
     public FlightScheduleServiceImpl(FlightScheduleRepository flightScheduleRepository, ReservationRepository reservationRepository) {

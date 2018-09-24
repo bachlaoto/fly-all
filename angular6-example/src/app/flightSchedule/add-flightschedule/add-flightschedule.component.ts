@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
-import {CustomerService} from '../../service/customer.service';
+import {FlightScheduleService} from '../../service/flight-schedule.service';
+import {AirlineService} from '../../service/airline.service';
+import {Airline} from '../../model/airline.model';
 
 @Component({
   selector: 'app-add-flightschedule',
@@ -12,8 +14,10 @@ export class AddFlightscheduleComponent implements OnInit {
 
   addForm: FormGroup;
   submitted = false;
+  airlines: Airline[];
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private customerService: CustomerService) {
+  constructor(private formBuilder: FormBuilder, private router: Router, private flightScheduleService: FlightScheduleService
+    , private airlineService: AirlineService) {
   }
 
   get f() {
@@ -42,11 +46,14 @@ export class AddFlightscheduleComponent implements OnInit {
     }
 
     alert('Add flight schedule successful');
-    this.customerService.createCustomer(this.addForm.value)
+    this.flightScheduleService.createFlightSchedule(this.addForm.value)
       .subscribe(data => {
         this.router.navigate(['list-flightSchedule']);
       });
-
+    this.airlineService.getAirline()
+      .subscribe(data => {
+        this.airlines = data;
+      });
   }
 
 }

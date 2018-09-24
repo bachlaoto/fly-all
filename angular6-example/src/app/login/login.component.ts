@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     }
     if (this.loginForm.controls.email.value == 'admin@gmail.com' && this.loginForm.controls.password.value == '123456') {
       sessionStorage.setItem('loginok', 'ok');
-      this.router.navigate(['list-flightSchedule']);
+      this.router.navigate(['customer']);
     } else {
       this.invalidLogin = true;
     }
